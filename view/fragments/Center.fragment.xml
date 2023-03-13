@@ -1,0 +1,60 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Dialog title="Selección de Ambito" contentHeight="500px">
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button id="buttonNavDialog" icon="sap-icon://nav-back" press="onNavBack" visible="false"/>
+				</contentLeft>
+				<contentMiddle  >
+					<Text text="Selección de Planta de Producción"/>
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<subHeader  >
+			<Toolbar>
+				<SearchField showRefreshButton="true"   liveChange="onSearchDialog"/>
+			</Toolbar>
+		</subHeader>
+		<NavContainer id="navCon">
+			<Page id="center" showHeader="false"  >
+				<content>
+					<List id="listPrincipal" items="{/results}">
+						<items>
+							<!--<StandardListItem title="Centro: {centerDialog>centro}" type="Active" press="onNavToPlanner" iconDensityAware="false" iconInset="false"/>-->
+							<ObjectListItem title="Centro: {centro}" type="Navigation" press="onNavToPlanner">
+								<!--<firstStatus>-->
+								<!--	<ObjectStatus text="{Status}" state="{ path: 'Status', formatter: 'sap.m.sample.ObjectListItem.Formatter.status' }"/>-->
+								<!--</firstStatus>-->
+								<attributes>
+									<ObjectAttribute text="{descripcion}"/>
+								</attributes>
+							</ObjectListItem>
+						</items>
+					</List>
+				</content>
+			</Page>
+			<Page id="planner" showNavButton="false" navButtonPress="onNavBack" showHeader="false"  >
+				<content>
+					<List id="listDetalle" items="{CentroRespon}" mode="SingleSelectMaster" itemPress="onResponsablesSelected">
+						<items>
+							<!--<StandardListItem title="Centro: {centerDialog>centro}" type="Active" press="onNavToPlanner" iconDensityAware="false" iconInset="false"/>-->
+							<!--<ObjectListItem title="Resp.Control Producción: {codigo}" type="Active">-->
+							<ObjectListItem title="{descripcion}" type="Active">
+								<!--<firstStatus>-->
+								<!--	<ObjectStatus text="{Status}" state="{ path: 'Status', formatter: 'sap.m.sample.ObjectListItem.Formatter.status' }"/>-->
+								<!--</firstStatus>-->
+								<!--<attributes>-->
+								<!--	<ObjectAttribute text="{descripcion}"/>-->
+								<!--</attributes>-->
+							</ObjectListItem>
+						</items>
+					</List>
+				</content>
+			</Page>
+		</NavContainer>
+		<buttons>
+			<!--<Button text="Ok" press="onButtonOkDialog" type="Default"/>-->
+			<Button text="Cancelar" press="onButtonCloseDialog" type="Default"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

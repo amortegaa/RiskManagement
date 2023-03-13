@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Dialog title="Lista de Materiales">
+		<f:SimpleForm maxContainerCols="2" editable="true" layout="ResponsiveGridLayout" labelSpanL="4" labelSpanM="4" emptySpanL="0" emptySpanM="0"
+			columnsL="2" columnsM="2">
+			<f:content>
+				<core:Title text="Material"/>
+				<Label text= "Material" required="true"/>
+				<Input id="idMaterialMath" showValueHelp="true" valueHelpOnly="true" valueHelpRequest="onHandleValueMaterial"/>
+				<Label text="Descripcion" required="true"/>
+				<Input id="idDescripcion" type="Text" editable="false" />
+				<Label text="Cantidad" required="true"/>
+				<Input id="idCantidadM" type="Number" />
+			</f:content>
+		</f:SimpleForm>
+		<buttons>
+			<Button text="Agregar" press="onSaveDialogMaterial" type="Accept"/>
+			<Button text="Cancelar" press="onCloseDialogMaterial" type="Reject"/>
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

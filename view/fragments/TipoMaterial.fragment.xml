@@ -1,0 +1,14 @@
+<core:FragmentDefinition
+		xmlns="sap.m"
+		xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+			confirm="handleConfirm" >
+		<filterItems >
+			<ViewSettingsFilterItem text="Tipo Material" key="1" items="{tipoMaterial>/}">
+				<items>
+					<ViewSettingsItem text="{tipoMaterial>descripcion}" key="{tipoMaterial>tipoMaterial}"/>
+				</items>
+			</ViewSettingsFilterItem>
+		</filterItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>
