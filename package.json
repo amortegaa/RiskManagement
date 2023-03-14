@@ -5,5 +5,8 @@
     "devDependencies": {
         "@sap/approuter": "10.5.1",
         "@sap/html5-repo-mock": "2.1.0"
+    },
+    "dependencies": {
+        "rimraf": "^4.4.0"
     }
 }
