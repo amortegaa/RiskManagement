@@ -1,0 +1,22 @@
+/* Enter your custom styles here */
+
+.size20{
+	font-size: 20px;
+}
+
+span#__attribute2-title {
+	font-size: 20px;
+}
+
+span#__attribute2-text {
+	font-size: 20px;
+}
+
+.sapMObjectNumberEmph>.sapMObjectNumberText {
+    white-space: normal;
+}
+
+.sapMInputBaseInner{
+	min-width:2rem;
+	padding: 0 0.3rem;
+}

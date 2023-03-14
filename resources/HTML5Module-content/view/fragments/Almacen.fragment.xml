@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	<Dialog title="Almacenes Disponibles">
+		<subHeader class="sapUiSizeCompact">
+			<Toolbar>
+				<SearchField showRefreshButton="true" class="sapUiSizeCompact" liveChange="onSearchAlmacen"/>
+			</Toolbar>
+		</subHeader>
+		<content>
+			<!--<Page showNavButton="false" showHeader="false" class="sapUiSizeCompact">
+				<content>-->
+			<List id="listAlmacenes" items="{/}" mode="SingleSelectMaster" itemPress="onHandleSelectAlmacen">
+				<items>
+					<ObjectListItem title="Almacén: {Almacen}" type="Active" press="onHandleSelectAlmacen">
+						<attributes>
+							<ObjectAttribute text="{Denominacion}"/>
+						</attributes>
+					</ObjectListItem>
+				</items>
+			</List>
+			<!--</content>
+			</Page>-->
+		</content>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,21 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <MessagePopover
+        items="{message>/}"
+        initiallyExpanded="true">
+       <MessageItem
+       	text=""
+       	enabled="true"
+       	textDirection="Inherit"
+       	key=""
+       	type="{message>Type}"
+       	title="{message>Message}"
+       	subtitle=""
+       	description=""
+       	markupDescription="false"
+       	longtextUrl=""
+       	groupName=""
+       	/>
+    </MessagePopover>
+</core:FragmentDefinition>
